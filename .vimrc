@@ -44,9 +44,17 @@ endif
 " End dein Scripts-------------------------
 
 " START aleの設定-------------------------
-" ファイルオープン時にチェックしたくない場合
-let g:ale_sign_column_always = 1
 
+" ファイルセーブ時にチェックする
+let g:ale_lint_on_save = 1
+
+" テキスト編集時にチェックしない
+let g:ale_lint_on_text_changed = 0
+
+" ファイルオープン時にチェックしたくない場合
+let g:ale_lint_on_enter = 0
+
+" 特定のファイルでlinterを動かす
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
@@ -66,7 +74,7 @@ set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
 
 " ヤンクしてクリップボードニコピー
-set clipboard=unnamed,autoselect
+set clipboard=unnamed
 
 " ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
 set laststatus=2
@@ -85,4 +93,3 @@ set incsearch
 
 " ハイライト検索
 set hlsearch
-
