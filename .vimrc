@@ -93,3 +93,6 @@ set incsearch
 
 " ハイライト検索
 set hlsearch
+
+" スワップファイルを作成しない
+:set noswapfile
