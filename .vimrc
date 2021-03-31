@@ -96,3 +96,6 @@ set hlsearch
 
 " スワップファイルを作成しない
 :set noswapfile
+
+" TABキーによる補完
+set wildmode=list:longest
