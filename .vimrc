@@ -13,7 +13,6 @@ if dein#load_state('/Users/d-yokozawa/.cache/dein')
   " Let dein manage dein
   " Required:
   call dein#add('/Users/d-yokozawa/.cache/dein/repos/github.com/Shougo/dein.vim')
-
   " Add or remove your plugins here like this:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
@@ -22,9 +21,9 @@ if dein#load_state('/Users/d-yokozawa/.cache/dein')
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-rbenv')
   call dein#add('vim-ruby/vim-ruby')
-  call dein#add('Yggdroot/indentLine')
   call dein#add('slim-template/vim-slim')
-
+  call dein#add('nathanaelkane/vim-indent-guides')
+	
   " Required:
   call dein#end()
   call dein#save_state()
@@ -95,7 +94,18 @@ set incsearch
 set hlsearch
 
 " スワップファイルを作成しない
-:set noswapfile
+set noswapfile
 
 " TABキーによる補完
 set wildmode=list:longest
+
+" ファイルの検索候補を出す
+set wildmode=list:longest
+
+" Indent Guidesの設定
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd ctermbg=0
+hi IndentGuidesEven ctermbg=0
