@@ -81,6 +81,7 @@ set laststatus=2
 
 "画面上でタブ文字が占める幅
 set tabstop=2
+set shiftwidth=2
 
 " 検索時に大文字と小文字を区別しない
 set ignorecase
