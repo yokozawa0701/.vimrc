@@ -49,7 +49,8 @@ endif
 let g:ale_lint_on_save = 1
 
 " テキスト編集時にチェックしない
-let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
 
 " ファイルオープン時にチェックしたくない場合
 let g:ale_lint_on_enter = 0
